@@ -1252,10 +1252,11 @@ static int http_connect(URLContext *h, const char *path, const char *local_path,
             av_free(cookies);
         }
     }
+    /*
     if (!has_header(s->headers, "\r\nIcy-MetaData: ") && s->icy)
         len += av_strlcatf(headers + len, sizeof(headers) - len,
                            "Icy-MetaData: %d\r\n", 1);
-
+    */
     /* now add in custom headers */
     if (s->headers)
         av_strlcpy(headers + len, s->headers, sizeof(headers) - len);
